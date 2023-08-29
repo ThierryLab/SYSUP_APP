@@ -1,0 +1,4 @@
+#please make sure you've installed the following libraries/dependencies before running the app
+pip3 install netmiko
+pip3 install prettytable
+pip3 install pyyaml

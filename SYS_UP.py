@@ -27,6 +27,7 @@ def connect_to_dev():
     hostinf={}
     host_sys_info = []
     for host in hosts:
+        print("Gathering data on {}".format(host))
         host_params = host_connect_parameters(host)
         try:
             with ConnectHandler(**host_params) as dev_connect:
@@ -43,6 +44,8 @@ def sys_up_view():
     table_view = PrettyTable(["DEVICES", "UPTIME"])
     host_details = connect_to_dev()
     if len(host_details) > 0:
+        print("")
+        print("    UPTIME PER DEVICE - SUMMARY VIEW  ")
         for info in host_details:
             hostname = info["hostname"]
             uptime = info["uptime"]
@@ -51,4 +54,7 @@ def sys_up_view():
     else:
         print("Device info not found, please ssh and devices reachability")
 
-print(sys_up_view())
+print(sys_up_view(), "\n")
+
+print("MIT License")
+print("Copyright (c) 2023 ThierryLab.com")
