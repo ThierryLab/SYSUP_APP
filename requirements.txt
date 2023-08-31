@@ -2,3 +2,6 @@
 pip3 install netmiko
 pip3 install prettytable
 pip3 install pyyaml
+
+
+# please ensure SSH is working properly on all of the network devices.
