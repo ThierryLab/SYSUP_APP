@@ -6,14 +6,16 @@ SYSUP_APP is a basic CLI tool that can be used to check the Device's uptime from
 Before running the app, please make sure you’ve installed all the libraries/dependencies found in the requirements.txt file.
 Next , update the host_info.yaml file with your current devices IP list and credentials.  for Example:
 
-![image](https://github.com/ThierryLab/SYSUP_APP/assets/81940840/33b42e75-1a05-4176-9759-738d0c4d05c2)
+![image](https://github.com/ThierryLab/SYSUP_APP/assets/81940840/42765618-4987-4b0c-a64b-204eba96058c)
+
 
 
 
 After doing that, go to your terminal (windows/linux/mac), go to directory SYSUP_APP, and execute the command: python SYS_UP.py         
 You should see an output almost similar to this one:
 
-![image](https://github.com/ThierryLab/SYSUP_APP/assets/81940840/7bf399ad-0923-4b77-bf6a-ee6e9f380818)
+![image](https://github.com/ThierryLab/SYSUP_APP/assets/81940840/a59a4f46-6d01-4205-9cdb-e8e547589884)
+
 
 
 MIT License
