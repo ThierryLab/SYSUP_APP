@@ -1,4 +1,6 @@
 # SYSUP_APP
+(Full instructions:  https://www.thierry-lab.com/post/sysup_app)
+
 I am pretty sure that at least one time in your career you wanted to check the uptime of a list of devices, perhaps just to determine if the root cause of an issue was actually a device reload, in the network infrastructure, or just for a sanity check. 
 
 SYSUP_APP is a basic CLI tool that can be used to check the Device's uptime from a list of Cisco (ios, ios-xe, xr) routers and switches (and nokia - new feature).        
@@ -15,6 +17,7 @@ After doing that, go to your terminal (windows/linux/mac), go to the SYSUP_APP d
 You should see an output almost similar to this one:
 
 ![image](https://github.com/ThierryLab/SYSUP_APP/assets/81940840/a59a4f46-6d01-4205-9cdb-e8e547589884)
+
 
 
 
