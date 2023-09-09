@@ -3,6 +3,7 @@ from prettytable import PrettyTable
 import yaml
 
 
+
 class Inventory_db:
 
     def __init__(self):
@@ -34,6 +35,7 @@ class Sys_up:
         self.inventory = Inventory_db()
     
 
+
     def host_connect_parameters(self, hostname, os_type):
         dev_params = {
             "device_type": os_type,
@@ -62,8 +64,6 @@ class Sys_up:
             except NetmikoTimeoutException:
                 print("WARNING!!! DEVICE {} NOT REACHABLE OR SSH NOT ENABLED".format(host))
         return host_sys_info
-
-
 
 
 # for devices with  non use_textfsm support  
@@ -95,12 +95,18 @@ class Sys_up:
         for x_element in range(total_dev_groups):
             for k , v in hosts[x_element].items():
                 if k == "NOKIA_SROS":
-                    dev_os = "nokia_srl"
-                    _NOKIA_conect_details = self.tl_dev_output(v, sros_command,dev_os, key_comand_ref=key_comand_ref )
-                    host_details += _NOKIA_conect_details
+                    if v == None or v == False:
+                        continue
+                    else:
+                        dev_os = "nokia_srl"
+                        _NOKIA_conect_details = self.tl_dev_output(v, sros_command,dev_os, key_comand_ref=key_comand_ref )
+                        host_details += _NOKIA_conect_details 
                 else:
-                    dev_os = "cisco_ios"
-                    host_details += self.connect_to_dev(v,comand, dev_os)
+                    if v == None or v == False:
+                        continue
+                    else:
+                        dev_os = "cisco_ios"
+                        host_details += self.connect_to_dev(v,comand, dev_os)
         return host_details
 
 
@@ -117,8 +123,7 @@ class Sys_up:
                     table_view.add_row([hostname, uptime])
                 return table_view
             else:
-                print("Device info not found, please ssh and devices reachability")
-
+                print("Device info not found, please check ssh and devices reachability")
 
 
 app = Sys_up()
