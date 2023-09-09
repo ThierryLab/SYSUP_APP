@@ -11,7 +11,7 @@ Next , update the host_info.yaml file with your current devices IP list and cred
 
 
 
-After doing that, go to your terminal (windows/linux/mac), go to directory SYSUP_APP, and execute the command: python SYS_UP.py         
+After doing that, go to your terminal (windows/linux/mac), go to the SYSUP_APP directory, and execute the command: python SYS_UP.py         
 You should see an output almost similar to this one:
 
 ![image](https://github.com/ThierryLab/SYSUP_APP/assets/81940840/a59a4f46-6d01-4205-9cdb-e8e547589884)
